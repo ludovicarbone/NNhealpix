@@ -27,7 +27,9 @@ class OrderMap(Layer):
     def build(self, input_shape):
         """Create the weights for the layer"""
         self.in_shape = input_shape
+        self.output_dim = (input_shape[0], self.indices.shape[0], input_shape[2])  # Fissa output_dim
         super(OrderMap, self).build(input_shape)
+
 
     def call(self, x):
         """Implement the layer's logic"""

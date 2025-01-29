@@ -5,8 +5,8 @@ import numpy as np
 import healpy as hp
 
 from scipy.interpolate import griddata
-from scipy.ndimage.interpolation import zoom
-
+#from scipy.ndimage.interpolation import zoom
+from scipy.ndimage import zoom
 
 @numba.jit(nopython=True)
 def binned_map(signal, pixidx, mappixels, hits, reset_map=True):
